@@ -1,0 +1,1 @@
+wmic process where name="chrome.exe" delete

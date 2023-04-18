@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS LeaderboardWeeks(
+	id VARCHAR(100) PRIMARY KEY,
+  	startTime TEXT NOT NULL,
+  	endTime TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS Schools(
+	id CHARACTER(32) PRIMARY KEY,
+  	name VARCHAR(100) NOT NULL,
+  	town VARCHAR(50) NOT NULL,
+  	privateSchool BOOLEAN NOT NULL
+);
+CREATE TABLE IF NOT EXISTS LeaderboardParticipations(
+  	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	leaderboardId VARCHAR(100) NOT NULL,
+  	participantSchoolId CHARACTER(32) NOT NULL,
+  	FOREIGN KEY(leaderboardId) REFERENCES leaderboardWeeks(id),
+  	FOREIGN KEY(participantSchoolId) REFERENCES Schools(id)
+);
+CREATE TABLE IF NOT EXISTS ParticipantProgressLogs (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+  	participationId INTEGER,
+  	timeSinceStart TEXT,
+  	score UNSIGNED BIG INT,
+  	leaderboardPosition INTEGER,
+  	FOREIGN KEY(participationId) REFERENCES leaderboardParticipations(id)
+)

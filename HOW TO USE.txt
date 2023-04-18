@@ -1,0 +1,8 @@
+To add the extension to chrome:
+1.) open chrome and go to "chrome://extensions". 
+2.) Turn on developer mode. Click load unpacked. 
+3.) Then browse to the parent folder of this file.
+
+To run the bot:
+1.) Run Server.exe
+2.) Go to a seneca task and activate the exension in the top right of the screen.

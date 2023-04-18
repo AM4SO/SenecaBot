@@ -1,0 +1,43 @@
+button {
+  height: 50px;
+  width: 150px;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  box-shadow: 5px 10px #888888;
+}
+p{
+	margin:3px;
+}
+h1{
+	margin-bottom: 12px;
+}
+body{
+	width:400px;
+	height: 330px;
+	padding: 10px;
+	padding-top: 2px;
+	font-size: 20px;
+	margin-bottom:20px;
+	line-height: 1.8;
+}
+button:active {
+	box-shadow: 1px 2px #888888;
+	margin-left: 14px;
+	margin-top: 18px;
+	margin-bottom: 2px;
+	margin-right: 6px;
+}
+#submit{
+	height: 45px;
+	width: 80px;
+	background-color: #91d7c9;
+}
+#userInfo.pos {
+	color: green;
+}
+#userInfo.neg{
+	color: red;
+}
